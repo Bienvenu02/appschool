@@ -1,0 +1,31 @@
+#my-keen-slider.preload {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.4s ease;
+}
+#my-keen-slider.preload.ready {
+  opacity: 1;
+  pointer-events: auto;
+  user-select: auto;
+}
+
+input.not-empty + label {
+    top: -0.6rem;
+    font-size: 0.875rem;
+    color: #2563eb;
+}
+
+#my-keen-slider {
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+#my-keen-slider .keen-slider__slide {
+  min-width: 100%;
+}
+
+html, body {
+  overflow-x: hidden;
+}

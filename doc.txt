@@ -1,0 +1,17 @@
+- Pour gerer l'historique des connexions j'ai du creer une autre variable d'environnement
+que j'ai configuré dans session.php afin de mettre a jour l'historique de la session en 
+lors de l'expiration de la session et aussi supprimé cette session egalement car laravel
+le faire nativement mais ne permet pas pas de faire la mise a jour. Pour ceci j'ai du
+le lifetime de la session laravel sur une durée longue car ceci entrait en con conflit 
+avec mon middleware sans pouvoir me permettre l'actualisation de l'historique de connexion
+et sa mise a jour.
+
+- https://laravel.com/docs/12.x/scheduling#scheduling-artisan-commands c'est pour planifier
+des tache
+
+- En production cette commande php artisan schedule:run pour gerer le cron ( L'execution 
+des suppressions des sessions inactives et la mise des historique de connexion de plus de
+24 heures )
+
+- runCustomValidation : Cette fonction pour mes js personnalisé lors de l'envoie de formualire dans ma
+page
